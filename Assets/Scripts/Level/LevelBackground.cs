@@ -5,6 +5,8 @@ namespace ShootEmUp
 {
     public sealed class LevelBackground : MonoBehaviour
     {
+        [SerializeField] private Params _params;
+
         private float _startPositionY;
         private float _endPositionY;
         private float _movingSpeedY;
@@ -13,13 +15,11 @@ namespace ShootEmUp
 
         private Transform _myTransform;
 
-        [SerializeField] private Params m_params;
-
         private void Awake()
         {
-            this._startPositionY = this.m_params.m_startPositionY;
-            this._endPositionY = this.m_params.m_endPositionY;
-            this._movingSpeedY = this.m_params.m_movingSpeedY;
+            this._startPositionY = this._params.StartPositionY;
+            this._endPositionY = this._params.EndPositionY;
+            this._movingSpeedY = this._params.MovingSpeedY;
             this._myTransform = this.transform;
             var position = this._myTransform.position;
             this._positionX = position.x;
@@ -47,9 +47,9 @@ namespace ShootEmUp
         [Serializable]
         public sealed class Params
         {
-            [SerializeField] public float m_startPositionY;
-            [SerializeField] public float m_endPositionY;
-            [SerializeField] public float m_movingSpeedY;
+            [SerializeField] public float StartPositionY;
+            [SerializeField] public float EndPositionY;
+            [SerializeField] public float MovingSpeedY;
         }
     }
 }

@@ -51,12 +51,12 @@ namespace ShootEmUp
                 bullet = Instantiate(this._prefab, this._worldTransform);
             }
 
-            bullet.SetPosition(args.position);
-            bullet.SetColor(args.color);
-            bullet.SetPhysicsLayer(args.physicsLayer);
-            bullet.Damage = args.damage;
-            bullet.IsPlayer = args.isPlayer;
-            bullet.SetVelocity(args.velocity);
+            bullet.SetPosition(args.Position);
+            bullet.SetColor(args.Color);
+            bullet.SetPhysicsLayer(args.PhysicsLayer);
+            bullet.Damage = args.Damage;
+            bullet.IsPlayer = args.IsPlayer;
+            bullet.SetVelocity(args.Velocity);
             
             if (this.m_activeBullets.Add(bullet))
             {
@@ -82,12 +82,12 @@ namespace ShootEmUp
         
         public struct Args
         {
-            public Vector2 position;
-            public Vector2 velocity;
-            public Color color;
-            public int physicsLayer;
-            public int damage;
-            public bool isPlayer;
+            public Vector2 Position;
+            public Vector2 Velocity;
+            public Color Color;
+            public int PhysicsLayer;
+            public int Damage;
+            public bool IsPlayer;
         }
     }
 }

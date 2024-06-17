@@ -43,12 +43,12 @@ namespace ShootEmUp
         {
             _bulletSystem.FlyBulletByArgs(new BulletSystem.Args
             {
-                isPlayer = false,
-                physicsLayer = (int) PhysicsLayer.ENEMY,
-                color = Color.red,
-                damage = 1,
-                position = position,
-                velocity = direction * 2.0f
+                IsPlayer = false,
+                PhysicsLayer = (int) PhysicsLayer.ENEMY,
+                Color = Color.red,
+                Damage = 1,
+                Position = position,
+                Velocity = direction * 2.0f
             });
         }
     }

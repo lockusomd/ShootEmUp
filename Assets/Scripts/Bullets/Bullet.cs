@@ -11,6 +11,9 @@ namespace ShootEmUp
         [NonSerialized] public int damage;
 
         [SerializeField]
+        private new Rigidbody2D rigidbody2D;
+
+        [SerializeField]
         private SpriteRenderer spriteRenderer;
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -20,7 +23,7 @@ namespace ShootEmUp
 
         public void SetVelocity(Vector2 velocity)
         {
-            this.GetComponent<Rigidbody2D>().velocity = velocity; // Убрал поле - стал вызывать компонент из объекта
+            this.rigidbody2D.velocity = velocity;
         }
 
         public void SetPhysicsLayer(int physicsLayer)

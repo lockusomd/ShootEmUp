@@ -6,11 +6,8 @@ namespace ShootEmUp
     {
         public float HorizontalDirection { get; private set; }
 
-        [SerializeField]
-        private GameObject character;
-
-        [SerializeField]
-        private CharacterController characterController;
+        [SerializeField] private GameObject character;
+        [SerializeField] private CharacterController characterController;
 
         private void Update()
         {

@@ -6,14 +6,7 @@ namespace ShootEmUp
     {
         [SerializeField] private Transform _firePoint;
 
-        public Vector2 Position
-        {
-            get { return this._firePoint.position; }
-        }
-
-        public Quaternion Rotation
-        {
-            get { return this._firePoint.rotation; }
-        }
+        public Vector2 Position => _firePoint.position; // Заменил на публичное свойство
+        public Quaternion Rotation => _firePoint.rotation; // Заменил на публичное свойство
     }
 }

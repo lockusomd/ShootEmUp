@@ -6,9 +6,6 @@ namespace ShootEmUp
     {
         [SerializeField] private bool _isPlayer;
 
-        public bool IsPlayer
-        {
-            get { return this._isPlayer; }
-        }
+        public bool IsPlayer => _isPlayer; // Заменил на публичное свойство
     }
 }
